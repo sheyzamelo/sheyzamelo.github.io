@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Blog</title>
+
+        <!-- link para que o navegador entenda as classes do W3.CSS -->
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <style>
+
+        /* Abaixo, os estilos gerais */
+
+        body {
+            margin: 0;
+            font-family: 'Cursive', cursive;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Pop-up de abertura */
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            display: flex; /* Flexbox para centralizar */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            text-align: center;
+            background: #000;
+            padding: 80px;
+            border-radius: 100px;
+            box-shadow: 30px 30px 30px #00f;
+            width: 80%; /* Largura do Popup */
+			height: 70%;
+        }
+
+        .popup-content h2 {
+            color: #00f;
+        }
+
+        .popup-content button {
+            background: #00f;
+            color: #fff;
+            border: none;
+            padding: 80px 60px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        /* Efeito luminoso que chamei de brilho piscando */
+
+        @keyframes brilho-piscando {
+            0% {
+                text-shadow: none;
+            }
+            50% {
+                text-shadow: 0px 0px 10px #00f;
+            }
+            100% {
+                text-shadow: none;
+            }
+        }
+
+        /* Estilo do Cabeçalho */
+
+        header {
+            background: linear-gradient(to right, #000, #000);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 36px;
+            color: #fff;
+            animation: brilho-piscando 2s infinite; /* Efeito de brilho aqui tbm */
+        }
+
+ /* Estilo do Corpo */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    background: url('bolha_arco_iris.png') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.gif-container {
+    max-width: 100%;
+}
+
+.gif-container iframe,
+.gif-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Adicionando borda arredondada */
+}
+
+.column p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+        /* Estilo do Rodapé */
+        footer {
+            background: linear-gradient(to right, #000, #000);
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #f00;
+        }
+
+        footer p {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pop-up de abertura... É bom ajeitar isso depois, não ficou legal -->
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Deseja continuar?</h2>
+            <button onclick="abrirPagina()">Sim</button>
+            <button onclick="exibirGif()">Não</button>
+        </div>
+    </div>
+
+<!-- Cabeçalho -->
+
+    <header>
+        <br><br>
+        <div class="tenor-gif-embed" data-postid="26547411" data-share-method="host" data-aspect-ratio="2.14765" data-width="100%"><a href="https://tenor.com/view/banner-gif-26547411">Banner GIF</a>from <a href="https://tenor.com/search/banner-gifs">Banner GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <br><br>
+        <h1><b><u>Aqui, meu pequeno espaço</u></b></h1>
+        <br><br>
+        <h2>Abaixo, algumas informações que não estão no meu currículo.</h2>
+        <br>
+        <p>É uma página simples, não seja exigente.</p>
+        <br>
+    
+    </header>
+    <br>
+
+    <!-- Incorporação do SoundCloud, sempre editar o link para tocar automaticamente ao carregar a página, deixei mostranto de onde veio -->
+    
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bruno-dias-92/alceu-valenca-la-belle-de-jour-ao-vivo&amp;auto_play=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+  
+    <!-- Corpo -->
+
+<div class="container">
+    <div class="column">
+        <div class="gif-container">
+            <div class="tenor-gif-embed" data-postid="17051831" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/kitten-cat-typing-typing-cat-kitty-gif-17051831">Kitten Cat GIF</a>from <a href="https://tenor.com/search/kitten-gifs">Kitten GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <p>Eu sou Sheyza, nasci em outubro/95, tenho 1,52 de altura e peso um pouco menos que 52kg. </p>
+        <p>Eu calço 36 e uso roupa P, nem sempre encontro o meu tamanho na sessão de adultos.</p>
+        <p>Gosto de natureza e águas, de viajar, de arte e música, café, vinho tinto e sorvete expresso.</p>
+    </div>
+    <div class="column">
+        <div class="gif-container">
+            <div class="tenor-gif-embed" data-postid="12754967" data-share-method="host" data-aspect-ratio="1.34135" data-width="100%"><a href="https://tenor.com/view/watching-eyesonyou-well-minhamaeeumapeca-paulogustavo-gif-12754967">Até Que Vai, Pensativa, Pensando, Minha Mãe é Uma Peça, Analisando GIF</a>from <a href="https://tenor.com/search/watching-gifs">Watching GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <p>Sou mãe sólo da Sarah Kali (inclusive na certidão de nascimento dela). Minha filha é uma criança linda e cheia de energia, que nasceu em novembro/20.</p>
+        <p>Também tenho uma gata chamada Frida, que está comigo há 9 anos, já viajou bastante comigo e é a minha companheira de todas as horas.</p>
+    </div>
+    <div class="column">
+        <div class="gif-container">
+            <div class="tenor-gif-embed" data-postid="10289976" data-share-method="host" data-aspect-ratio="1.77515" data-width="100%"><a href="https://tenor.com/view/i-have-plans-im-busy-unavailable-plans-stretch-armstrong-gif-10289976">I Have Plans Im Busy GIF</a>from <a href="https://tenor.com/search/i+have+plans-gifs">I Have Plans GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <p>Geralmente, eu faço muitos planos e há um plano extra (que consiste em ir a praia, chorar antes de dormir e fazer novos planos).</p>
+        <p>Também costumo anotar tudo, registrar de alguma forma coisas que eu não posso esquecer, porque provavelmente se eu não fizer isso poderei esquecer.</p>
+    </div>
+    <div class="column">
+        <div class="gif-container">
+            <div class="tenor-gif-embed" data-postid="16536400" data-share-method="host" data-aspect-ratio="1.72973" data-width="100%"><a href="https://tenor.com/view/bye-adios-tchau-mirupafshim-wave-gif-16536400">Bye Adios GIF</a>from <a href="https://tenor.com/search/bye-gifs">Bye GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <p></p>
+        <p>Eu sou persistente naquilo que acredito e que quero. Se algo não dá certo eu tento seguir a vida normalmente.</p>
+        <p>Acho que isso é tudo, pessoal.</p>
+    </div>
+</div>
+
+    <!-- Rodapé -->
+
+<footer>
+    <p>Por Sheyza</p>
+	<br>
+    <!-- Botão para direcionar para o WhatsApp e Linkedin -->
+    <a href="whatsapp://send?phone=5583996047352" target="_blank">   
+        <button>Enviar mensagem no WhatsApp</button>
+    </a>
+    <br>
+    <br>
+    <a href="https://www.linkedin.com/in/sheyzamelo" target="_blank">
+        <button>Acessar o LinkedIn</button>
+      </a>
+</footer>
+
+<script>
+
+    // Abrir a página ao clicar em "Sim" no pop-up
+
+    function abrirPagina() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+// Fechar o pop-up ao clicar em "Não"
+
+function fecharPopup() {
+    document.getElementById("popup").style.display = "none";
+
+}
+    // Mostrar o pop-up ao carregar a página
+
+    window.onload = function () {
+        document.getElementById("popup").style.display = "block";
+    };
+    
+</script>
+</body>
+</html>
